@@ -37,8 +37,9 @@ int main(){
         cout << "---------------------------------\n";
         cout << "Please input your command: ";
         getline(cin,command);
-        cout << "---------------------------------\n";
         rule = command.substr(0,5);
+        if(rule == "exit")break;
+        cout << "---------------------------------\n";
         if(rule == "name "){
             command = command.erase(0,5);
             for(int i=0;i<count;i++){
@@ -76,8 +77,6 @@ int main(){
                 cout <<"Cannot found.\n";
             }
 
-        }else if(rule == "exit"){
-            break;
         }else{
             cout << "Invalid command\n";
         }
