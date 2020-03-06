@@ -40,7 +40,7 @@ int main(){
         rule = command.substr(0,5);
         if(rule == "exit")break;
         cout << "---------------------------------\n";
-        if(rule == "name "){
+        if(rule == "name "||rule == "NAME "){
             command = command.erase(0,5);
             for(int i=0;i<count;i++){
                 fix = a[i];
@@ -60,7 +60,7 @@ int main(){
             }
 
 
-        }else if(rule == "grade"){
+        }else if(rule == "grade"||rule == "GRADE"){
             command = command.erase(0,6);
             
             for(int i=0;i<count;i++){
@@ -82,7 +82,6 @@ int main(){
         }
 
     }
-
 
 
 }
